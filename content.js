@@ -131,32 +131,6 @@ class AutoLogin {
         return errorElements.length > 0;
     }
 
-    addVisualIndicator() {
-        if (document.querySelector('.auto-login-indicator')) {
-            return;
-        }
-
-        const indicator = document.createElement('div');
-        indicator.className = 'auto-login-indicator';
-        indicator.innerHTML = '🔐 自動ログイン有効';
-        indicator.style.cssText = `
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: #2ecc71;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            z-index: 10000;
-            font-family: sans-serif;
-        `;
-        document.body.appendChild(indicator);
-
-        setTimeout(() => {
-            indicator.remove();
-        }, 3000);
-    }
 }
 
 if (document.readyState === 'loading') {
