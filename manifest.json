@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "統一認証システム自動ログイン",
+  "version": "1.0",
+  "description": "統一認証システムへの自動ログイン機能",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://idp.account.tsukuba.ac.jp/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://idp.account.tsukuba.ac.jp/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "自動ログイン設定"
+  }
+}

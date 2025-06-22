@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自動ログイン設定</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <h1>統一認証システム自動ログイン設定</h1>
+        
+        <div class="form-group">
+            <label for="username">ユーザーID:</label>
+            <input type="text" id="username" placeholder="学籍番号">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" placeholder="パスワードを入力">
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="autoLogin">
+                自動ログインを有効にする
+            </label>
+        </div>
+        
+        <div class="button-group">
+            <button id="save" class="btn-primary">設定を保存</button>
+            <button id="clear" class="btn-secondary">設定をクリア</button>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <div class="warning">
+            <p><strong>⚠️ 注意事項</strong></p>
+            <ul>
+                <li>認証情報は暗号化されてローカルに保存されます</li>
+                <li>この機能は大学の公式サービスではありません</li>
+                <li>セキュリティリスクを理解した上でご利用ください</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="options.js"></script>
+</body>
+</html>
